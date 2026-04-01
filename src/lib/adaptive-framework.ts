@@ -1,7 +1,7 @@
 import CryptoJS from "crypto-js";
 
 export type RiskLevel = "low" | "medium" | "high";
-export type AppLanguage = "en" | "hi" | "kn";
+export type AppLanguage = "en" | "hi" | "kn" | "mr" | "te" | "ta" | "ml";
 
 export interface AdaptiveContext {
   hasWeakNetwork: boolean;
@@ -79,6 +79,30 @@ const translations = {
     suspicious: "ಸಂದಿಗ್ಧ",
     dangerous: "ಅಪಾಯಕಾರಿ",
     doNotShareOtp: "OTP, PIN ಅಥವಾ CVV ಅನ್ನು ಯಾರೊಂದಿಗೂ ಹಂಚಿಕೊಳ್ಳಬೇಡಿ.",
+  },
+  mr: {
+    safe: "सुरक्षित",
+    suspicious: "संशयास्पद",
+    dangerous: "धोकादायक",
+    doNotShareOtp: "OTP, PIN किंवा CVV कोणाशीही शेअर करू नका.",
+  },
+  te: {
+    safe: "సురక్షితం",
+    suspicious: "అనుమానాస్పదం",
+    dangerous: "ప్రమాదకరం",
+    doNotShareOtp: "OTP, PIN లేదా CVV ను ఎవరితోనూ పంచుకోకండి.",
+  },
+  ta: {
+    safe: "பாதுகாப்பானது",
+    suspicious: "சந்தேகத்துக்கிடமானது",
+    dangerous: "ஆபத்தானது",
+    doNotShareOtp: "OTP, PIN அல்லது CVV-ஐ யாருடனும் பகிர வேண்டாம்.",
+  },
+  ml: {
+    safe: "സുരക്ഷിതം",
+    suspicious: "സംശയാസ്പദം",
+    dangerous: "അപകടകരം",
+    doNotShareOtp: "OTP, PIN അല്ലെങ്കിൽ CVV ആരുമായും പങ്കിടരുത്.",
   },
 };
 
