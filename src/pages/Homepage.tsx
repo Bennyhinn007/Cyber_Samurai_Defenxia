@@ -3,14 +3,13 @@ import { ProgressCircle } from "@/components/ui/progress-circle";
 import { QuickActionButton } from "@/components/quick-action-button";
 import { Button } from "@/components/ui/button";
 import { invokeEdgeFunction } from "@/lib/supabase-client";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { toast } from "sonner";
 import {
   AppLanguage,
   appendTrustEvent,
   calculateTrustScore,
   getAdaptiveGuidance,
-  loadTrustChain,
 } from "@/lib/adaptive-framework";
 import { 
   QrCode, 
@@ -297,7 +296,6 @@ const Homepage = () => {
   const [isScanning, setIsScanning] = useState(false);
   const [secureMode, setSecureMode] = useState(true);
   const [language, setLanguage] = useState<AppLanguage>("en");
-  const trustChain = useMemo(() => loadTrustChain(), []);
   const trustScore = calculateTrustScore({
     hasWeakNetwork: false,
     suspiciousSmsCount: 1,
@@ -456,12 +454,6 @@ const Homepage = () => {
           <div className="text-sm text-muted-foreground text-center space-y-1">
             <p>{t.offlineLine}</p>
             <p>{guide.doNotShareOtp}</p>
-            <p>{t.trustEvents} <span className="text-foreground font-semibold">{trustChain.length}</span></p>
-            <div className="pt-2">
-              <Button onClick={() => navigate("/demo-mode")} className="glow-button text-white">
-                {t.demoMode}
-              </Button>
-            </div>
           </div>
         </div>
       </div>
