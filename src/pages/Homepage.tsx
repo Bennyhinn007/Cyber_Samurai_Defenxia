@@ -32,7 +32,6 @@ const featuredQuickActions = [
   { icon: ShieldAlert, label: "Anti-Scam Kill-Switch", path: "/anti-scam-kill-switch" },
   { icon: PhoneCall, label: "Cyber-Sanchaar Shield", path: "/cyber-sanchaar-shield" },
 ];
-
 const quickActions = [
   { icon: QrCode, labelKey: "scanQrPayment", path: "/qr-scanner" },
   { icon: ShieldAlert, labelKey: "smsFraudShield", path: "/report-analysis" },
