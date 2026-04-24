@@ -2,8 +2,6 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/061091df-f550-410b-857c-381d8c6f5e56
-
 https://cyber-samurai-defenxia.vercel.app/
 
 ## How can I edit this code?
